@@ -83,3 +83,71 @@ button {
 button:hover {
   opacity: 0.9;
 }
+
+/* Slider Section */
+.slider-section {
+  background: black;
+  color: white;
+  padding: 60px 40px;
+}
+
+.slider-title {
+  font-size: 48px;
+  margin-bottom: 40px;
+}
+
+/* Horizontal scroll */
+.slider-container {
+  display: flex;
+  overflow-x: auto;
+  gap: 20px;
+  scroll-behavior: smooth;
+}
+
+/* Hide scrollbar */
+.slider-container::-webkit-scrollbar {
+  display: none;
+}
+
+/* Each Slide */
+.slide {
+  min-width: 400px;
+  height: 250px;
+  position: relative;
+  flex-shrink: 0;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+/* Image */
+.slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(60%);
+}
+
+/* Content */
+.slide-content {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+}
+
+.slide-content h2 {
+  font-size: 22px;
+  margin-bottom: 10px;
+}
+
+.slide-content p {
+  font-size: 14px;
+  max-width: 300px;
+  line-height: 1.4;
+}
+
+/* Hover effect */
+.slide:hover img {
+  filter: brightness(80%);
+  transform: scale(1.05);
+  transition: 0.3s;
+}
